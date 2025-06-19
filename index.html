@@ -12,31 +12,89 @@
   <link rel="stylesheet" href="./assets/tailwind.css">
   <link rel="stylesheet" href="./assets/work-tabs.css">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
-
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="./assets/global.css">
 </head>
 
 <body class="bg-black text-white font-sans">
   <!-- Navbar -->
-  <nav class="flex justify-between items-center px-6 py-4 bg-black text-white shadow-md">
-    <div class="text-2xl font-bold">Jonathan</div>
-    <ul class="flex space-x-6 text-sm md:text-base">
-      <li><a href="#about" class="hover:text-green-400">About</a></li>
-      <li><a href="#projects" class="hover:text-green-400">Projects</a></li>
-      <li><a href="#contact" class="hover:text-green-400">Contact</a></li>
-    </ul>
-  </nav>
+    <nav class="bg-black shadow-lg fixed top-0 w-full z-50">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="flex justify-between items-center h-16">
+                <!-- Logo and primary items (always visible) -->
+                <a href="#" class="text-xl font-bold text-green-400">Ananthu Krishnan CV</a>
+                <div class="flex items-center space-x-4 ml-auto">
+                    <div class="hidden md:flex items-center space-x-1">
+                        <a href="#" class="px-3 py-2 rounded-md text-sm font-medium text-white hover:bg-green-600">Home</a>
+                        <a href="#servicesSection" class="px-3 py-2 rounded-md text-sm font-medium text-gray-300 hover:bg-green-600 transition hover:text-white">Services</a>
+                        <a href="#worksSection" class="px-3 py-2 rounded-md text-sm font-medium text-gray-300 hover:bg-green-600 transition hover:text-white">Works</a>
+
+                    </div>
+                </div>
+                
+                <!-- Secondary items (visible on desktop, hidden on mobile) -->
+                <!-- <div class="hidden md:flex items-center space-x-4">
+                    <a href="#" class="px-3 py-2 rounded-md text-sm font-medium text-gray-300 hover:bg-gray-700 hover:text-white">Portfolio</a>
+                    <a href="#" class="px-3 py-2 rounded-md text-sm font-medium text-gray-300 hover:bg-gray-700 hover:text-white">Contact</a>
+                    <a href="#" class="text-gray-300 hover:text-white">
+                        <i class="fab fa-github"></i>
+                    </a>
+                    <a href="#" class="text-gray-300 hover:text-white">
+                        <i class="fab fa-twitter"></i>
+                    </a>
+                    <button class="bg-blue-600 hover:bg-blue-700 px-3 py-1 rounded-md text-sm font-medium text-white">
+                        Sign Up
+                    </button>
+                </div> -->
+                
+                <!-- Mobile menu button -->
+                <div class="md:hidden flex items-center">
+                    <button id="mobile-menu-button" class="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-white hover:bg-gray-700 focus:outline-none">
+                        <svg class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Mobile menu (contains all elements) -->
+        <div id="mobile-menu" class="md:hidden hidden">
+            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+                <a href="#" class="block px-3 py-2 rounded-md text-base font-medium text-white bg-gray-900">Home</a>
+                <a href="#" class="block px-3 py-2 rounded-md text-base font-medium text-gray-300 hover:bg-green-400 hover:text-white">About</a>
+                <a href="#" class="block px-3 py-2 rounded-md text-base font-medium text-gray-300 hover:bg-green-400 hover:text-white">Services</a>
+                <a href="#" class="block px-3 py-2 rounded-md text-base font-medium text-gray-300 hover:bg-green-400 hover:text-white">Portfolio</a>
+                <a href="#" class="block px-3 py-2 rounded-md text-base font-medium text-gray-300 hover:bg-green-400 hover:text-white">Contact</a>
+            </div>
+            <div class="pt-4 pb-3 border-t border-gray-700">
+                <div class="flex items-center px-5 space-x-3">
+                    <a href="#" class="text-gray-400 hover:text-white">
+                        <i class="fab fa-github text-xl"></i>
+                    </a>
+                    <a href="#" class="text-gray-400 hover:text-white">
+                        <i class="fab fa-twitter text-xl"></i>
+                    </a>
+                    <button class="bg-blue-600 hover:bg-blue-700 px-3 py-1 rounded-md text-sm font-medium text-white ml-auto">
+                        Sign Up
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
 
   <!-- Hero Section -->
-  <section class="min-h-screen flex flex-col md:flex-row items-center justify-center container max-w-7xl mx-auto py-12">
+  <section class="lg:min-h-screen flex flex-col md:flex-row items-center justify-center container max-w-7xl mx-auto py-12">
     <!-- Profile Image -->
     <div class="w-full md:w-1/3 flex flex-col justify-center items-center mb-10 md:mb-0">
       <img src="./assets/images/alex-suprun-bYODySpLIhE-unsplash.jpg" alt="Jonathan profile" class="rounded-full w-64 h-64 object-cover shadow-lg" />
       <!-- Social Links -->
       <div class="flex justify-center md:justify-start space-x-6 mb-6 text-2xl">
-        <a href="#" class="hover:text-green-400"><i class="fab fa-linkedin"></i>in</a>
-        <a href="#" class="hover:text-green-400">X</a>
-        <a href="#" class="hover:text-green-400"><i class="fab fa-instagram"></i>ig</a>
-        <a href="#" class="hover:text-green-400"><i class="fab fa-facebook"></i>fb</a>
+        <a href="#" class="hover:text-green-400 text-gray-500"><i class="fa-brands fa-behance"></i></i></a>
+        <!-- <a href="#" class="hover:text-green-400">X</a> -->
+        <a href="#" class="hover:text-green-400 text-gray-500"><i class="fab fa-instagram"></i></a>
+        <a href="#" class="hover:text-green-400 text-gray-500"><i class="fa-brands fa-facebook-f"></i></a>
+        <a href="#" class="hover:text-green-400 text-gray-500"><i class="fab fa-linkedin"></i></a>
       </div>
 
       <!-- Hire Me Button -->
@@ -44,10 +102,10 @@
     </div>
 
     <!-- Intro Text -->
-    <div class="w-full md:w-2/3 text-center md:text-left">
+    <div class="w-full md:w-2/3 text-center md:text-left px-5 px-md-0">
       <p class="text-green-400 text-lg mb-2">Hello</p>
       <h1 class="text-4xl md:text-5xl font-bold leading-tight mb-4">
-        I'm Jonathan, UX/UI Designer and no-code Developer
+        I'm<span class="text-green-400"> Ananthu Krishnan</span> , <br> <span class="text-4xl">Graphic Designer, Motion Graphics Designer</span>
       </h1>
       <p class="text-gray-400 mb-6">
         I craft elegant solutions to complex problems, and I gives me pleasure. I'm living in Berlin with my loving wife and cute daughter.
@@ -74,7 +132,7 @@
   </section>
 
   <!-- Services Section -->
-  <section class="bg-black container max-w-7xl mx-auto py-16 text-center">
+  <section class="bg-black container max-w-7xl mx-auto py-16 text-center px-5 lg:px-0" id="servicesSection">
     <p class="text-green-400 mb-2 uppercase tracking-widest">Our Services</p>
     <h2 class="text-4xl font-bold mb-4">What <span class="text-green-400">We Do.</span></h2>
     <p class="text-gray-400 max-w-2xl mx-auto mb-12">
@@ -106,11 +164,11 @@
   </section>
 
   <!-- Feature Highlights Section -->
-  <section class="bg-black container max-w-7xl mx-auto py-16">
+  <section class="bg-black container max-w-7xl mx-auto py-16 px-5 px-lg-0">
     <div class="text-center mb-12">
       <h2 class="text-3xl font-bold text-white">Featured Services</h2>
     </div>
-    <div class="grid gap-8 md:grid-cols-3">
+    <div class="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
       <div class="relative bg-gray-900 p-6 rounded-lg text-center">
         <div class="absolute -top-4 -left-4 w-6 h-6 border-t-4 border-l-4 border-red-500"></div>
         <h3 class="text-white text-xl font-bold mb-2">Digital Marketing</h3>
@@ -131,22 +189,22 @@
     </div>
   </section>
     <!-- Works Section with Tabs and Swiper -->
-    <section class="py-16 px-4 md:px-8 lg:px-16">
+    <section class="py-16 px-4 md:px-8 lg:px-16" id="worksSection">
         <div class="container mx-auto">
             <div class="text-center mb-12">
-                <h2 class="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-400 mb-4">Works</h2>
-                <p class="text-gray-600 max-w-2xl mx-auto">Explore our designer's diverse range of poster creations across different styles and themes.</p>
+                <h2 class="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-300 mb-4">Works</h2>
+                <p class="text-gray-400 max-w-2xl mx-auto">Explore our designer's diverse range of poster creations across different styles and themes.</p>
             </div>
 
             <!-- Tabs Navigation -->
-            <div class="flex flex-wrap justify-center mb-8 gap-2 md:gap-4">
-                <button class="tab-btn px-4 py-2 rounded-full bg-white text-gray-800 font-medium shadow-sm hover:bg-gray-100 transition-all duration-300 active bg-indigo-600 text-white" data-tab="minimalist">
+            <div class="flex md:flex-row flex-col flex-wrap justify-center mb-8 gap-4 md:gap-4">
+                <button class="tab-btn px-4 py-2 rounded-lg bg-gray-800 text-white font-medium shadow-sm hover:bg-green-600 transition-all duration-300 active bg-green-600 text-white" data-tab="minimalist">
                     Motion graphics
                 </button>
-                <button class="tab-btn px-4 py-2 rounded-full bg-white text-gray-800 font-medium shadow-sm hover:bg-gray-100 transition-all duration-300" data-tab="typography">
+                <button class="tab-btn px-4 py-2 rounded-lg bg-gray-800 text-white font-medium shadow-sm hover:bg-green-600 transition-all duration-300" data-tab="typography">
                     Social media Posters
                 </button>
-                <button class="tab-btn px-4 py-2 rounded-full bg-white text-gray-800 font-medium shadow-sm hover:bg-gray-100 transition-all duration-300" data-tab="vintage">
+                <button class="tab-btn px-4 py-2 rounded-lg bg-gray-800 text-white font-medium shadow-sm hover:bg-green-600 transition-all duration-300" data-tab="vintage">
                     Logos
                 </button>
                 <!-- <button class="tab-btn px-4 py-2 rounded-full bg-white text-gray-800 font-medium shadow-sm hover:bg-gray-100 transition-all duration-300" data-tab="abstract">
@@ -382,15 +440,15 @@
     </section>
 
   <!-- Footer -->
-  <footer class="bg-gray-900 text-white px-6 py-10 mt-16">
+  <footer class="bg-gray-900 text-white px-6 py-6 mt-16">
     <div class="flex flex-col md:flex-row justify-between items-center">
-      <p class="text-sm">&copy; 2025 Jonathan. All rights reserved.</p>
-      <div class="flex space-x-4 mt-4 md:mt-0">
-        <a href="#" class="hover:text-green-400">LinkedIn</a>
-        <a href="#" class="hover:text-green-400">Instagram</a>
-        <a href="#" class="hover:text-green-400">Twitter</a>
-        <a href="#" class="hover:text-green-400">Facebook</a>
+      <div class="flex space-x-4 mt-4 md:mt-0 text-2xl">
+        <a href="#" class="hover:text-green-400"><i class="fa-brands fa-behance"></i></i></a>
+        <a href="#" class="hover:text-green-400"><i class="fab fa-instagram"></i></a>
+        <a href="#" class="hover:text-green-400"><i class="fa-brands fa-facebook-f"></i></a>
+        <a href="#" class="hover:text-green-400"><i class="fab fa-linkedin"></i></a>
       </div>
+      <p class="text-sm">&copy; 2025 Ananthu Krishnan. All rights reserved.</p>
     </div>
   </footer>
 
@@ -410,6 +468,7 @@
   <!-- <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script> -->
   <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
   <script src="./assets/swiper.js"></script>
+  <script src="./assets/navbar.js"></script>
 
 </body>
 

@@ -14,13 +14,13 @@
             tabButtons.forEach(button => {
                 button.addEventListener('click', function() {
                     // Remove active class from all buttons and tab contents
-                    tabButtons.forEach(btn => btn.classList.remove('active', 'bg-indigo-600', 'text-white'));
+                    tabButtons.forEach(btn => btn.classList.remove('active', 'bg-green-400', 'text-white'));
                     document.querySelectorAll('.tab-content').forEach(content => {
                         content.classList.remove('active');
                     });
 
                     // Add active class to clicked button and corresponding content
-                    this.classList.add('active', 'bg-indigo-600', 'text-white');
+                    this.classList.add('active', 'bg-green-400', 'text-white');
                     const tabId = this.getAttribute('data-tab');
                     document.getElementById(tabId).classList.add('active');
 
