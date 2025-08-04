@@ -12,3 +12,11 @@ body{
 html {
     scroll-behavior: smooth;
 }
+.swiper-pagination-bullet {
+    background: #fff !important;
+    opacity: 0.5;
+}
+.swiper-pagination-bullet-active {
+    background: rgba(52,211,153,var(--tw-text-opacity)) !important;
+    opacity: 1;
+}
